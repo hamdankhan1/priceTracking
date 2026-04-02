@@ -30,7 +30,6 @@ class StockViewModel(
 
         viewModelScope.launch {
 
-            /// 🔁 SEND LOOP
             launch {
                 while (isRunning) {
                     symbols.forEach {
@@ -43,7 +42,6 @@ class StockViewModel(
                 }
             }
 
-            /// 📡 RECEIVE STREAM
             launch {
                 repository.stockStream.collect { stock ->
                     updateList(stock)

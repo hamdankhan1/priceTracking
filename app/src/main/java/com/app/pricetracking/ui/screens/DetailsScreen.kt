@@ -33,7 +33,6 @@ fun DetailsScreen(symbol: String, viewModel: StockViewModel) {
                 .padding(20.dp)
         ) {
 
-            /// 🔹 Symbol Title
             Text(
                 text = it.symbol,
                 style = MaterialTheme.typography.headlineLarge,
@@ -42,7 +41,6 @@ fun DetailsScreen(symbol: String, viewModel: StockViewModel) {
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            /// 🔹 Price
             Text(
                 text = "₹ ${"%.2f".format(it.price)}",
                 style = MaterialTheme.typography.displaySmall,
@@ -51,7 +49,6 @@ fun DetailsScreen(symbol: String, viewModel: StockViewModel) {
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            /// 🔹 Change
             Text(
                 text = if (isUp) "▲ Rising" else "▼ Falling",
                 color = color,
@@ -60,7 +57,6 @@ fun DetailsScreen(symbol: String, viewModel: StockViewModel) {
 
             Spacer(modifier = Modifier.height(30.dp))
 
-            /// 🔹 Description
             Text(
                 text = "This is live data for $symbol. Prices are updated in real-time using WebSocket connection.",
                 style = MaterialTheme.typography.bodyMedium

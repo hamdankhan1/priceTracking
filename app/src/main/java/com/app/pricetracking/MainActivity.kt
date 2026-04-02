@@ -21,11 +21,9 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             PriceTrackingTheme {
-
                 val viewModel: StockViewModel = viewModel(
                     factory = StockViewModelFactory(repository)
                 )
-
                 NavGraph(viewModel)
             }
         }

@@ -32,7 +32,6 @@ fun FeedScreen(
 
     Column {
 
-        /// 🔥 Header
         Text(
             text = "📊 Live Market",
             style = MaterialTheme.typography.headlineSmall,

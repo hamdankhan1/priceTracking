@@ -26,7 +26,7 @@ fun SplashScreen(onNavigate: () -> Unit) {
 
     LaunchedEffect(Unit) {
         startAnim = true
-        delay(2000) // ⏱ Splash duration
+        delay(2000)
         onNavigate()
     }
 
@@ -36,7 +36,6 @@ fun SplashScreen(onNavigate: () -> Unit) {
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
-            /// 🔥 APP NAME
             Text(
                 text = "📊 Price Tracker",
                 fontSize = 28.sp,
@@ -46,7 +45,6 @@ fun SplashScreen(onNavigate: () -> Unit) {
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            /// 🔹 TAGLINE
             Text(
                 text = "Real-time market updates",
                 style = MaterialTheme.typography.bodyMedium,
